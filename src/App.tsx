@@ -1,10 +1,14 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { Grade } from './pages';
 
-function App() {
+import { theme } from './settings/styles/theme';
+
+const App: React.FC = () => {
   return (
-    <div>
-      <h1>GRADE APP</h1>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Grade />
+    </ThemeProvider>
   );
 }
 
