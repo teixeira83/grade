@@ -28,8 +28,8 @@ export const Title = styled.span`
     font-size: ${({ theme }) => theme.fonts.medium}px;
 `;
 
-export const IconContainer = styled.div`
-    background-color: "#000";
+export const IconContainer = styled.div<IAccordionContainer>`
+    background-color: ${({ theme, isOpen }) => isOpen ? theme.colors.details : theme.colors.primary};
     border: 1px solid ${({ theme }) => theme.colors.secondary};
     border-radius: 25px;
     height: 32px;
@@ -42,6 +42,7 @@ export const IconContainer = styled.div`
 export const DropDownArrowIcon = styled(RiArrowDropDownLine)<IAccordionContainer>`
     ${({ isOpen }) => isOpen && 'transform: rotate(180deg)'};
     transition-duration: .5s;
+    color: ${({ theme, isOpen }) => isOpen ? theme.colors.primary : theme.colors.details};
 `;
 
 

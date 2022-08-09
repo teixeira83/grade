@@ -24,7 +24,7 @@ export const Accordion: React.FC<IAccordion> = ({ title, isOpen, onClick }) => {
         >
           <Title>{title}</Title>
 
-          <IconContainer>
+          <IconContainer isOpen={isOpen}>
             <DropDownArrowIcon
               isOpen={isOpen}  
               size={32}
