@@ -5,6 +5,7 @@ interface IStyleGuide {
     primary: string;
     secondary: string;
     background: string;
+    details: string;
     text: string;
     textLight: string;
     attention: string;
